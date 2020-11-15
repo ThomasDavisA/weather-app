@@ -14,8 +14,6 @@ class SearchBar extends React.Component {
     this.setState({
       searchType: e.target.value,
     });
-
-    console.log(this.state);
   };
 
   searchSubmit = (event) => {

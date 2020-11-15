@@ -13,7 +13,7 @@ export class WeatherContextProvider extends React.Component {
     weather: {},
     main: {},
     name: "",
-    loading: false,
+    loading: true,
   };
 
   componentDidMount = () => {
@@ -27,10 +27,10 @@ export class WeatherContextProvider extends React.Component {
       .then((weather) => {
         console.log(weather);
         this.setState({
-          weather: weather.weather,
+          weather: weather.weather[0],
           main: weather.main,
           name: weather.name,
-          loading: true,
+          loading: false,
         });
       })
       .catch((error) => {
@@ -47,9 +47,9 @@ export class WeatherContextProvider extends React.Component {
         return res.json();
       })
       .then((weather) => {
-        console.log("called weather city");
+        console.log(weather);
         this.setState({
-          weather: weather.weather,
+          weather: weather.weather[0],
           main: weather.main,
           name: weather.name,
         });
@@ -69,7 +69,7 @@ export class WeatherContextProvider extends React.Component {
       .then((weather) => {
         console.log(weather);
         this.setState({
-          weather: weather.weather,
+          weather: weather.weather[0],
           main: weather.main,
           name: weather.name,
         });
