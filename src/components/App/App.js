@@ -1,7 +1,14 @@
 import logo from "../../logo.svg";
+import WeatherContext, {
+  WeatherContextProvider,
+} from "../../context/WeatherContext";
 import SearchBar from "../SearchBar/SearchBar";
 import Panel from "../Panel/Panel";
 import "./App.css";
+
+const handleSubmit = (input) => {
+  input.preventDefault();
+};
 
 function App() {
   return (
@@ -20,9 +27,10 @@ function App() {
           Learn React
         </a>
       </header>
-
-      <SearchBar></SearchBar>
-      <Panel></Panel>
+      <WeatherContextProvider>
+        <SearchBar></SearchBar>
+        <Panel></Panel>
+      </WeatherContextProvider>
     </div>
   );
 }
