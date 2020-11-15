@@ -17,7 +17,6 @@ export class WeatherContextProvider extends React.Component {
   };
 
   componentDidMount = () => {
-    console.log("didmountcalled");
     fetch(
       "http://api.openweathermap.org/data/2.5/weather?q=Riverside&units=imperial&appid=62a55a68fbbb825f22e99d63184d3afe"
     )
@@ -25,7 +24,6 @@ export class WeatherContextProvider extends React.Component {
         return res.json();
       })
       .then((weather) => {
-        console.log(weather);
         this.setState({
           weather: weather.weather[0],
           main: weather.main,
@@ -39,7 +37,6 @@ export class WeatherContextProvider extends React.Component {
   };
 
   searchCity = (name) => {
-    console.log("called searchCity");
     fetch(
       `http://api.openweathermap.org/data/2.5/weather?q=${name}&units=imperial&appid=62a55a68fbbb825f22e99d63184d3afe`
     )
@@ -47,7 +44,6 @@ export class WeatherContextProvider extends React.Component {
         return res.json();
       })
       .then((weather) => {
-        console.log(weather);
         this.setState({
           weather: weather.weather[0],
           main: weather.main,
@@ -67,7 +63,6 @@ export class WeatherContextProvider extends React.Component {
         return res.json();
       })
       .then((weather) => {
-        console.log(weather);
         this.setState({
           weather: weather.weather[0],
           main: weather.main,

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import WeatherContext from "../../context/WeatherContext";
 import "./Panel.css";
 

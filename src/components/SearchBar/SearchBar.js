@@ -19,10 +19,8 @@ class SearchBar extends React.Component {
   searchSubmit = (event) => {
     event.preventDefault();
     if (this.state.searchType === "zip") {
-      console.log("called zip");
       this.context.searchZip(this.state.searchValue);
     } else {
-      console.log("called city");
       this.context.searchCity(this.state.searchValue);
     }
   };
