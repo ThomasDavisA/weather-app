@@ -35,24 +35,30 @@ class SearchBar extends React.Component {
     return (
       <>
         <form className="search-bar" onSubmit={(e) => this.searchSubmit(e)}>
-          <input
-            type="radio"
-            value="zip"
-            name="searchType"
-            className="zip-search"
-            onChange={this.handleChange}
-            checked={this.state.searchType === "zip"}
-          />
-          <label htmlFor="zip-search">Zip</label>
-          <input
-            type="radio"
-            value="city"
-            name="searchType"
-            className="city-search"
-            onChange={this.handleChange}
-            checked={this.state.searchType === "city"}
-          />
-          <label htmlFor="city-search">City</label>
+          <div className="radio-box">
+            <div>
+              <input
+                type="radio"
+                value="zip"
+                name="searchType"
+                className="zip-search"
+                onChange={this.handleChange}
+                checked={this.state.searchType === "zip"}
+              />
+              <label htmlFor="zip-search">Zip</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                value="city"
+                name="searchType"
+                className="city-search"
+                onChange={this.handleChange}
+                checked={this.state.searchType === "city"}
+              />
+              <label htmlFor="city-search">City</label>
+            </div>
+          </div>
           <input
             type="text"
             name="input"
