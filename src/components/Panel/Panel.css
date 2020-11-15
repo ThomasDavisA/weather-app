@@ -6,3 +6,35 @@
   justify-content: space-around;
   align-items: center;
 }
+
+.panel-local-high,
+.panel-local-low {
+  padding: 0 5vw;
+  font-size: 0.8rem;
+}
+
+.panel-local-high h4,
+.panel-local-low h4 {
+  font-size: 1.1rem;
+}
+
+.panel-local-current {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+
+.panel-local-current h2 {
+  font-size: 1.25rem;
+}
+
+.current-feel-like-box h3,
+.current-feel-like-box p {
+  margin: 5px 0;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}

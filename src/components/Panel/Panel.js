@@ -24,8 +24,10 @@ class Panel extends React.Component {
               src={`http://openweathermap.org/img/wn/${this.context.weather.icon}@2x.png`}
               alt={this.context.weather.description}
             ></img>
-            <h3>Currently: {this.context.main.temp || "70"}°F</h3>
-            <p>(but feels like {this.context.main.feels_like || "80"}°F)</p>
+            <div className="current-feel-like-box">
+              <h3>Currently: {this.context.main.temp || "70"}°F</h3>
+              <p>(but feels like {this.context.main.feels_like || "80"}°F)</p>
+            </div>
           </div>
           <div className="panel-local-low">
             <h3>Current Low: </h3>

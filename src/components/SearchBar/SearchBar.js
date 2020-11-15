@@ -60,7 +60,7 @@ class SearchBar extends React.Component {
             onChange={(e) => this.setName(e.target.value)}
             className="search-input"
           ></input>
-          <button name="search-submit" type="submit">
+          <button className="search-submit" type="submit">
             Search
           </button>
         </form>
