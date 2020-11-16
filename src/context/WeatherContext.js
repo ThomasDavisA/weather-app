@@ -18,7 +18,7 @@ export class WeatherContextProvider extends React.Component {
 
   componentDidMount = () => {
     fetch(
-      "http://api.openweathermap.org/data/2.5/weather?q=Riverside&units=imperial&appid=62a55a68fbbb825f22e99d63184d3afe"
+      "https://api.openweathermap.org/data/2.5/weather?q=Riverside&units=imperial&appid=62a55a68fbbb825f22e99d63184d3afe"
     )
       .then((res) => {
         return res.json();
@@ -38,7 +38,7 @@ export class WeatherContextProvider extends React.Component {
 
   searchCity = (name) => {
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${name}&units=imperial&appid=62a55a68fbbb825f22e99d63184d3afe`
+      `https://api.openweathermap.org/data/2.5/weather?q=${name}&units=imperial&appid=62a55a68fbbb825f22e99d63184d3afe`
     )
       .then((res) => {
         return res.json();
@@ -57,7 +57,7 @@ export class WeatherContextProvider extends React.Component {
 
   searchZip = (zip) => {
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?zip=${zip}&units=imperial&appid=62a55a68fbbb825f22e99d63184d3afe`
+      `https://api.openweathermap.org/data/2.5/weather?zip=${zip}&units=imperial&appid=62a55a68fbbb825f22e99d63184d3afe`
     )
       .then((res) => {
         return res.json();
